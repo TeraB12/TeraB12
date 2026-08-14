@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="Mapa de stack: Frontend React, Next.js, TypeScript, Tailwind, Capacitor. Backend Node.js, NestJS, Prisma, PostgreSQL, Redis. Integraciones MercadoPago, AFIP, Mercado Libre, WhatsApp Meta, Gemini. Infraestructura Railway, Vercel, Cloudflare, Docker, Git. El tamano del nodo indica el nivel de dominio y las lineas son dependencias reales.">
+  <title>Mapa de stack — Mateo Pereyra</title>
+
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
+      .sans { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif; }
+
+      .eyebrow { font-size: 12px; letter-spacing: 2.6px; fill: #E9B23E; }
+      .lede    { font-size: 15px; fill: #8A857C; }
+      .colhead { font-size: 10px; letter-spacing: 2.2px; fill: #807C74; }
+      .nlabel  { font-size: 11.5px; letter-spacing: .4px; fill: #B6B1A8; }
+      .legend  { font-size: 10.5px; letter-spacing: 1.6px; fill: #807C74; }
+      .foot    { font-size: 11px; letter-spacing: .3px; fill: #6B6862; }
+
+      /* Los nodos de dominio alto laten, escalonados. Misma firma que el header. */
+      .hi { animation: breathe 4.4s cubic-bezier(.16,1,.3,1) infinite; }
+      .d1 { animation-delay: 0s;   }
+      .d2 { animation-delay: .55s; }
+      .d3 { animation-delay: 1.1s; }
+      .d4 { animation-delay: 1.65s;}
+      @keyframes breathe {
+        0%, 100% { opacity: 1;   }
+        50%      { opacity: .58; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1280" height="640" fill="#0A0A08"/>
+  <path d="M0 .5 H1280 M0 639.5 H1280" stroke="#F4F1EA" stroke-opacity=".11" stroke-width="1"/>
+
+  <!-- ================= ENCABEZADO ================= -->
+  <text class="mono eyebrow" x="64" y="54">MAPA DE STACK</text>
+  <text class="sans lede"    x="64" y="82">El tamaño del nodo es el dominio real, no un badge. Las líneas son dependencias que existen de verdad en mis sistemas.</text>
+
+  <!-- ================= ARISTAS (debajo de todo) ================= -->
+  <g fill="none" stroke="#F4F1EA" stroke-opacity=".14" stroke-width="1">
+    <!-- Frontend interno -->
+    <path d="M280,227 V178"/>
+    <path d="M280,243 V292"/>
+    <path d="M277,427 C225,395 225,215 277,175"/>
+    <!-- Backend interno -->
+    <path d="M640,176 V227"/>
+    <path d="M640,243 V292"/>
+    <path d="M648,238 C690,290 690,380 646,427"/>
+    <path d="M640,308 V359"/>
+    <!-- Backend hacia Frontend -->
+    <path d="M632,238 C520,250 420,290 288,299"/>
+    <!-- Integraciones hacia NestJS: el nucleo real de la arquitectura -->
+    <path d="M995,172 C880,180 760,205 649,231"/>
+    <path d="M994,235 H649"/>
+    <path d="M996,298 C880,290 760,265 649,240"/>
+    <path d="M997,363 C880,340 760,285 650,244"/>
+    <path d="M997,428 C880,400 740,300 651,247"/>
+    <!-- Hacia infraestructura -->
+    <path d="M285,243 C340,330 420,450 486,514"/>
+    <path d="M633,243 C540,330 400,450 305,514"/>
+    <path d="M634,370 C560,420 400,480 305,516"/>
+    <path d="M676,522 H496"/>
+  </g>
+
+  <!-- ================= COLUMNAS ================= -->
+  <text class="mono colhead" x="280"  y="130" text-anchor="middle">FRONTEND</text>
+  <text class="mono colhead" x="640"  y="130" text-anchor="middle">BACKEND</text>
+  <text class="mono colhead" x="1000" y="130" text-anchor="middle">INTEGRACIONES</text>
+
+  <!-- ---------- FRONTEND (etiquetas a la izquierda) ---------- -->
+  <rect x="272" y="162" width="16" height="16" fill="#E9B23E" class="hi d1"/>
+  <text class="mono nlabel" x="256" y="175" text-anchor="end">React</text>
+
+  <rect x="272" y="227" width="16" height="16" fill="#E9B23E" class="hi d2"/>
+  <text class="mono nlabel" x="256" y="240" text-anchor="end">Next.js</text>
+
+  <rect x="272" y="292" width="16" height="16" fill="#E9B23E" class="hi d3"/>
+  <text class="mono nlabel" x="256" y="305" text-anchor="end">TypeScript</text>
+
+  <rect x="274.5" y="359.5" width="11" height="11" fill="#B6B1A8"/>
+  <text class="mono nlabel" x="258" y="369" text-anchor="end">Tailwind CSS</text>
+
+  <rect x="276" y="426" width="8" height="8" fill="#6B6862"/>
+  <text class="mono nlabel" x="260" y="434" text-anchor="end">Capacitor</text>
+
+  <!-- ---------- BACKEND (etiquetas arriba, con fondo para ganarle a las aristas) ---------- -->
+  <rect x="634.5" y="164.5" width="11" height="11" fill="#B6B1A8"/>
+  <rect x="610" y="141" width="60" height="15" fill="#0A0A08"/>
+  <text class="mono nlabel" x="640" y="153" text-anchor="middle">Node.js</text>
+
+  <rect x="632" y="227" width="16" height="16" fill="#E9B23E" class="hi d1"/>
+  <rect x="613" y="204" width="54" height="15" fill="#0A0A08"/>
+  <text class="mono nlabel" x="640" y="216" text-anchor="middle">NestJS</text>
+
+  <rect x="632" y="292" width="16" height="16" fill="#E9B23E" class="hi d4"/>
+  <rect x="613" y="269" width="54" height="15" fill="#0A0A08"/>
+  <text class="mono nlabel" x="640" y="281" text-anchor="middle">Prisma</text>
+
+  <rect x="634.5" y="359.5" width="11" height="11" fill="#B6B1A8"/>
+  <rect x="599" y="336" width="82" height="15" fill="#0A0A08"/>
+  <text class="mono nlabel" x="640" y="348" text-anchor="middle">PostgreSQL</text>
+
+  <rect x="636" y="426" width="8" height="8" fill="#6B6862"/>
+  <rect x="616" y="403" width="48" height="15" fill="#0A0A08"/>
+  <text class="mono nlabel" x="640" y="415" text-anchor="middle">Redis</text>
+
+  <!-- ---------- INTEGRACIONES (etiquetas a la derecha) ---------- -->
+  <rect x="994.5" y="164.5" width="11" height="11" fill="#B6B1A8"/>
+  <text class="mono nlabel" x="1018" y="174">MercadoPago</text>
+
+  <rect x="994.5" y="229.5" width="11" height="11" fill="#B6B1A8"/>
+  <text class="mono nlabel" x="1018" y="239">AFIP</text>
+
+  <rect x="996" y="296" width="8" height="8" fill="#6B6862"/>
+  <text class="mono nlabel" x="1018" y="304">Mercado Libre</text>
+
+  <rect x="996" y="361" width="8" height="8" fill="#6B6862"/>
+  <text class="mono nlabel" x="1018" y="369">WhatsApp / Meta</text>
+
+  <rect x="996" y="426" width="8" height="8" fill="#6B6862"/>
+  <text class="mono nlabel" x="1018" y="434">IA (Gemini)</text>
+
+  <!-- ================= INFRAESTRUCTURA ================= -->
+  <path d="M64 478.5 H1216" stroke="#F4F1EA" stroke-opacity=".11" stroke-width="1"/>
+  <text class="mono colhead" x="64" y="527">INFRAESTRUCTURA</text>
+
+  <rect x="294.5" y="516.5" width="11" height="11" fill="#B6B1A8"/>
+  <text class="mono nlabel" x="300" y="551" text-anchor="middle">Railway</text>
+
+  <rect x="484.5" y="516.5" width="11" height="11" fill="#B6B1A8"/>
+  <text class="mono nlabel" x="490" y="551" text-anchor="middle">Vercel</text>
+
+  <rect x="676" y="518" width="8" height="8" fill="#6B6862"/>
+  <text class="mono nlabel" x="680" y="551" text-anchor="middle">Cloudflare</text>
+
+  <rect x="866" y="518" width="8" height="8" fill="#6B6862"/>
+  <text class="mono nlabel" x="870" y="551" text-anchor="middle">Docker</text>
+
+  <rect x="1054.5" y="516.5" width="11" height="11" fill="#B6B1A8"/>
+  <text class="mono nlabel" x="1060" y="551" text-anchor="middle">Git / CI</text>
+
+  <!-- ================= REFERENCIA ================= -->
+  <path d="M64 578.5 H1216" stroke="#F4F1EA" stroke-opacity=".11" stroke-width="1"/>
+
+  <rect x="64" y="596" width="14" height="14" fill="#E9B23E"/>
+  <text class="mono legend" x="88" y="607">DOMINIO ALTO</text>
+
+  <rect x="252" y="598" width="10" height="10" fill="#B6B1A8"/>
+  <text class="mono legend" x="274" y="607">SOLIDO</text>
+
+  <rect x="404" y="599" width="8" height="8" fill="#6B6862"/>
+  <text class="mono legend" x="426" y="607">EN USO ACTIVO</text>
+
+  <text class="sans foot" x="1216" y="607" text-anchor="end">Autoevaluación honesta. Prefiero decir qué domino y qué apenas uso.</text>
+</svg>
