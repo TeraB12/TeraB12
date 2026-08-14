@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="Mapa de stack: Frontend React, Next.js, TypeScript, Tailwind, Capacitor. Backend Node.js, NestJS, Prisma, PostgreSQL, Redis. Integraciones MercadoPago, AFIP, Mercado Libre, WhatsApp Meta, Gemini. Infraestructura Railway, Vercel, Cloudflare, Docker, Git. El tamano del nodo indica el nivel de dominio y las lineas son dependencias reales.">
-  <title>Mapa de stack — Mateo Pereyra</title>
+  <title>Mapa de stack · Mateo Pereyra</title>
 
   <defs>
     <style>
@@ -64,7 +64,7 @@
   <text class="mono colhead" x="640"  y="130" text-anchor="middle">BACKEND</text>
   <text class="mono colhead" x="1000" y="130" text-anchor="middle">INTEGRACIONES</text>
 
-  <!-- ---------- FRONTEND (etiquetas a la izquierda) ---------- -->
+  <!-- ========== FRONTEND (etiquetas a la izquierda) ========== -->
   <rect x="272" y="162" width="16" height="16" fill="#E9B23E" class="hi d1"/>
   <text class="mono nlabel" x="256" y="175" text-anchor="end">React</text>
 
@@ -80,7 +80,7 @@
   <rect x="276" y="426" width="8" height="8" fill="#6B6862"/>
   <text class="mono nlabel" x="260" y="434" text-anchor="end">Capacitor</text>
 
-  <!-- ---------- BACKEND (etiquetas arriba, con fondo para ganarle a las aristas) ---------- -->
+  <!-- ========== BACKEND (etiquetas arriba, con fondo para ganarle a las aristas) ========== -->
   <rect x="634.5" y="164.5" width="11" height="11" fill="#B6B1A8"/>
   <rect x="610" y="141" width="60" height="15" fill="#0A0A08"/>
   <text class="mono nlabel" x="640" y="153" text-anchor="middle">Node.js</text>
@@ -101,7 +101,7 @@
   <rect x="616" y="403" width="48" height="15" fill="#0A0A08"/>
   <text class="mono nlabel" x="640" y="415" text-anchor="middle">Redis</text>
 
-  <!-- ---------- INTEGRACIONES (etiquetas a la derecha) ---------- -->
+  <!-- ========== INTEGRACIONES (etiquetas a la derecha) ========== -->
   <rect x="994.5" y="164.5" width="11" height="11" fill="#B6B1A8"/>
   <text class="mono nlabel" x="1018" y="174">MercadoPago</text>
 

@@ -56,22 +56,22 @@ App para rescatar perritos y gatitos de la calle y encontrarles familia. Nadie c
 
 Lo que de verdad muestra cómo trabajo no es la lista de tecnologías, son las decisiones y lo que costaron.
 
-**El núcleo no sabe de rubros** &nbsp;·&nbsp; *Localazo*
+**El núcleo no sabe de rubros** &nbsp;·&nbsp; *Localazo*<br>
 Un rubro nuevo entra por el contrato de `verticales/`. Si para agregar barbería hay que tocar `nucleo/`, el contrato está mal diseñado. Cuesta más al principio y se paga solo en el segundo rubro.
 
-**Migraciones idempotentes, sin motor de migraciones** &nbsp;·&nbsp; *Blussi*
+**Migraciones idempotentes, sin motor de migraciones** &nbsp;·&nbsp; *Blussi*<br>
 Una lista de sentencias que corre entera en cada arranque en frío, tomando un lock de Postgres para que dos lambdas no choquen creando el mismo índice. Para cambiar el esquema se agrega al final y lo viejo no se edita, porque ya corrió en producción. Menos piezas que mantener, y el estado real de la base se lee de una sola pasada.
 
-**Un commit, dos dominios, una variable** &nbsp;·&nbsp; *Blussi*
+**Un commit, dos dominios, una variable** &nbsp;·&nbsp; *Blussi*<br>
 La lista de espera y la app completa son el mismo build, separados por una variable de entorno. Un proxy manda a la landing cualquier ruta que todavía no corresponda, así nadie llega al proyecto a medio terminar adivinando una URL. El día del lanzamiento se cambia la variable, no el código.
 
-**Multi-tenant de verdad** &nbsp;·&nbsp; *plataforma de Pulso*
+**Multi-tenant de verdad** &nbsp;·&nbsp; *plataforma de Pulso*<br>
 Cada comercio opera con su dominio propio, su marca y sus datos aislados. El subdominio de un revendedor se crea y se verifica solo contra la API de Vercel: el comercio lo da de alta y el catálogo queda publicado.
 
-**Del mostrador a la factura, en un solo flujo**
+**Del mostrador a la factura, en un solo flujo**<br>
 Una venta en el punto de venta descuenta stock, cobra con MercadoPago y factura en AFIP sin salir de la pantalla. La parte difícil no es cada integración por separado: es que las tres fallen bien cuando una se cae.
 
-**Un asistente que no inventa catálogo**
+**Un asistente que no inventa catálogo**<br>
 Responde sólo con productos, stock y precios reales del comercio, con defensa contra inyección de prompt, y deriva al vendedor humano cuando la charla avanza. Un asistente que alucina stock hace más daño que no tener asistente.
 
 <br>

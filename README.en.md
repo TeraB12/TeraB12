@@ -56,22 +56,22 @@ An app to get rescued dogs and cats off the street and into a family. Nobody eve
 
 What actually shows how I work is not the list of technologies, it is the decisions and what they cost.
 
-**The core knows nothing about verticals** &nbsp;·&nbsp; *Localazo*
+**The core knows nothing about verticals** &nbsp;·&nbsp; *Localazo*<br>
 A new vertical enters through the `verticales/` contract. If adding barbershop means touching `nucleo/`, the contract is badly designed. It costs more up front and pays for itself on the second vertical.
 
-**Idempotent migrations, no migration engine** &nbsp;·&nbsp; *Blussi*
+**Idempotent migrations, no migration engine** &nbsp;·&nbsp; *Blussi*<br>
 A list of statements that runs in full on every cold start, taking a Postgres lock so two lambdas do not collide creating the same index. Schema changes are appended at the end and old ones are never edited, because they already ran in production. Fewer moving parts to maintain, and the real state of the database reads in a single pass.
 
-**One commit, two domains, one variable** &nbsp;·&nbsp; *Blussi*
+**One commit, two domains, one variable** &nbsp;·&nbsp; *Blussi*<br>
 The waitlist and the full app are the same build, separated by one environment variable. A proxy sends any route that should not be reachable yet back to the landing, so nobody stumbles into a half-finished product by guessing a URL. On launch day you change the variable, not the code.
 
-**Real multi-tenancy** &nbsp;·&nbsp; *Pulso platform*
+**Real multi-tenancy** &nbsp;·&nbsp; *Pulso platform*<br>
 Every shop runs on its own domain, with its own brand and isolated data. A reseller subdomain is created and verified automatically against the Vercel API: the shop adds the reseller and the catalogue goes live.
 
-**From the counter to the invoice, in one flow**
+**From the counter to the invoice, in one flow**<br>
 A sale at the point of sale drops stock, charges through MercadoPago and issues the AFIP invoice without leaving the screen. The hard part is not each integration on its own: it is making all three fail well when one of them goes down.
 
-**An assistant that does not invent inventory**
+**An assistant that does not invent inventory**<br>
 It answers only with the shop's real products, stock and prices, with prompt injection defences, and hands the conversation to a human when the sale gets serious. An assistant that hallucinates stock does more damage than no assistant at all.
 
 <br>
