@@ -48,7 +48,7 @@ App para rescatar perritos y gatitos de la calle y encontrarles familia. Nadie c
 
 ## Mapa de stack
 
-<img src="assets/stack.svg" alt="Mapa de stack. Frontend: React, Next.js y TypeScript con dominio alto, Tailwind sólido, Capacitor en uso activo. Backend: NestJS y Prisma con dominio alto, Node.js y PostgreSQL sólidos, Redis en uso activo. Integraciones: MercadoPago y AFIP sólidos, Mercado Libre, WhatsApp y Gemini en uso activo. Infraestructura: Railway, Vercel y Git sólidos, Cloudflare y Docker en uso activo.">
+<img src="assets/stack-map.svg" alt="Mapa de stack. Frontend: React, Next.js y TypeScript con dominio alto, Tailwind sólido, Capacitor en uso activo. Backend: NestJS y Prisma con dominio alto, Node.js y PostgreSQL sólidos, Redis en uso activo. Integraciones: MercadoPago y AFIP sólidos, Mercado Libre, WhatsApp y Gemini en uso activo. Infraestructura: Railway, Vercel y Git sólidos, Cloudflare y Docker en uso activo.">
 
 <br>
 

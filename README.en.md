@@ -48,7 +48,7 @@ An app to get rescued dogs and cats off the street and into a family. Nobody eve
 
 ## Stack map
 
-<img src="assets/stack-en.svg" alt="Stack map. Frontend: React, Next.js and TypeScript at high command, Tailwind solid, Capacitor in active use. Backend: NestJS and Prisma at high command, Node.js and PostgreSQL solid, Redis in active use. Integrations: MercadoPago and AFIP solid, Mercado Libre, WhatsApp and Gemini in active use. Infrastructure: Railway, Vercel and Git solid, Cloudflare and Docker in active use.">
+<img src="assets/stack-map-en.svg" alt="Stack map. Frontend: React, Next.js and TypeScript at high command, Tailwind solid, Capacitor in active use. Backend: NestJS and Prisma at high command, Node.js and PostgreSQL solid, Redis in active use. Integrations: MercadoPago and AFIP solid, Mercado Libre, WhatsApp and Gemini in active use. Infrastructure: Railway, Vercel and Git solid, Cloudflare and Docker in active use.">
 
 <br>
 
