@@ -6,12 +6,12 @@
       .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
       .sans { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif; }
 
-      .eyebrow { font-size: 12px; letter-spacing: 2.6px; fill: #E9B23E; }
-      .lede    { font-size: 15px; fill: #8A857C; }
-      .colhead { font-size: 10px; letter-spacing: 2.2px; fill: #807C74; }
-      .nlabel  { font-size: 11.5px; letter-spacing: .4px; fill: #B6B1A8; }
-      .legend  { font-size: 10.5px; letter-spacing: 1.6px; fill: #807C74; }
-      .foot    { font-size: 11px; letter-spacing: .3px; fill: #6B6862; }
+      .eyebrow { font-size: 16px; letter-spacing: 2.6px; fill: #E9B23E; }
+      .lede    { font-size: 18px; fill: #8A857C; }
+      .colhead { font-size: 13px; letter-spacing: 2.2px; fill: #807C74; }
+      .nlabel  { font-size: 15px; letter-spacing: .4px; fill: #B6B1A8; }
+      .legend  { font-size: 13px; letter-spacing: 1.6px; fill: #807C74; }
+      .foot    { font-size: 13px; letter-spacing: .3px; fill: #6B6862; }
 
       /* Los nodos de dominio alto laten, escalonados. Misma firma que el header. */
       .hi { animation: breathe 4.4s cubic-bezier(.16,1,.3,1) infinite; }
@@ -82,23 +82,23 @@
 
   <!-- ========== BACKEND (etiquetas arriba, con fondo para ganarle a las aristas) ========== -->
   <rect x="634.5" y="164.5" width="11" height="11" fill="#B6B1A8"/>
-  <rect x="610" y="141" width="60" height="15" fill="#0A0A08"/>
+  <rect x="601" y="139" width="78" height="19" fill="#0A0A08"/>
   <text class="mono nlabel" x="640" y="153" text-anchor="middle">Node.js</text>
 
   <rect x="632" y="227" width="16" height="16" fill="#E9B23E" class="hi d1"/>
-  <rect x="613" y="204" width="54" height="15" fill="#0A0A08"/>
+  <rect x="606" y="202" width="68" height="19" fill="#0A0A08"/>
   <text class="mono nlabel" x="640" y="216" text-anchor="middle">NestJS</text>
 
   <rect x="632" y="292" width="16" height="16" fill="#E9B23E" class="hi d4"/>
-  <rect x="613" y="269" width="54" height="15" fill="#0A0A08"/>
+  <rect x="606" y="267" width="68" height="19" fill="#0A0A08"/>
   <text class="mono nlabel" x="640" y="281" text-anchor="middle">Prisma</text>
 
   <rect x="634.5" y="359.5" width="11" height="11" fill="#B6B1A8"/>
-  <rect x="599" y="336" width="82" height="15" fill="#0A0A08"/>
+  <rect x="588" y="334" width="104" height="19" fill="#0A0A08"/>
   <text class="mono nlabel" x="640" y="348" text-anchor="middle">PostgreSQL</text>
 
   <rect x="636" y="426" width="8" height="8" fill="#6B6862"/>
-  <rect x="616" y="403" width="48" height="15" fill="#0A0A08"/>
+  <rect x="610" y="401" width="59" height="19" fill="#0A0A08"/>
   <text class="mono nlabel" x="640" y="415" text-anchor="middle">Redis</text>
 
   <!-- ========== INTEGRACIONES (etiquetas a la derecha) ========== -->

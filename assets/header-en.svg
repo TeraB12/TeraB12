@@ -6,12 +6,12 @@
       .mono  { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
       .sans  { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif; }
 
-      .eyebrow { font-size: 12px; letter-spacing: 2.6px; fill: #E9B23E; }
+      .eyebrow { font-size: 14px; letter-spacing: 2.6px; fill: #E9B23E; }
       .name    { font-size: 92px; font-weight: 800; letter-spacing: -3.6px; fill: #F4F1EA; }
       .subline { font-size: 25px; font-weight: 400; letter-spacing: -0.4px; fill: #B6B1A8; }
-      .key     { font-size: 9.5px; letter-spacing: 1.9px; fill: #6B6862; }
-      .val     { font-size: 13px; letter-spacing: 0.6px; fill: #F4F1EA; }
-      .chip    { font-size: 11px; letter-spacing: 2.1px; fill: #807C74; }
+      .key     { font-size: 11.5px; letter-spacing: 1.9px; fill: #6B6862; }
+      .val     { font-size: 15px; letter-spacing: 0.6px; fill: #F4F1EA; }
+      .chip    { font-size: 12.5px; letter-spacing: 2.1px; fill: #807C74; }
 
       /* The heartbeat: a gold pulse travelling the trace. Same signature as the site. */
       .ecg-live {
