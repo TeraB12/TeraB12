@@ -14,6 +14,10 @@ No entrego demos. Entrego sistemas que quedan andando, y me quedo cerca midiendo
 
 <br>
 
+<img src="assets/pulse.svg" alt="Panel de actividad de los últimos 12 meses: total de contribuciones, racha actual, racha más larga y día más activo, con el mapa de calor día por día.">
+
+<br>
+
 ## En qué estoy ahora
 
 ### Localazo &nbsp;·&nbsp; proyecto principal

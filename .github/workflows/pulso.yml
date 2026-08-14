@@ -1,0 +1,58 @@
+name: Pulso
+
+# Regenera el panel de actividad del README. Se hace acá y no con un servicio
+# de terceros para que el dibujo siga la paleta de Pulso y no dependa de que
+# el proyecto de otro siga en pie dentro de un año.
+
+on:
+  schedule:
+    # Todos los días a las 06:17 UTC, o sea las 03:17 en Córdoba.
+    # El minuto no es redondo a propósito: en las horas en punto se junta
+    # media plataforma y las tareas programadas arrancan tarde.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/pulse.mjs
+      - .github/workflows/pulso.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pulso
+  cancel-in-progress: false
+
+jobs:
+  panel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generar el panel
+        env:
+          # PULSE_TOKEN es opcional. El GITHUB_TOKEN del workflow alcanza
+          # mientras "Include private contributions on my profile" siga
+          # activado, porque eso hace públicos los totales. Si algún día se
+          # apaga, el panel baja a las contribuciones públicas y hay que
+          # cargar un token propio en este secreto.
+          GH_TOKEN: ${{ secrets.PULSE_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: node scripts/pulse.mjs
+
+      - name: Publicar si cambió
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/pulse.svg assets/pulse-en.svg
+          if git diff --staged --quiet; then
+            echo "El panel no cambió. No se commitea nada."
+          else
+            git commit -m "chore: actualiza el panel de actividad"
+            git push
+          fi

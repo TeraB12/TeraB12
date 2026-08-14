@@ -14,6 +14,10 @@ I do not ship demos. I ship systems that stay running, and I stay close, measuri
 
 <br>
 
+<img src="assets/pulse-en.svg" alt="Activity panel for the last 12 months: total contributions, current streak, longest streak and busiest day, with the day by day heatmap.">
+
+<br>
+
 ## What I am building now
 
 ### Localazo &nbsp;·&nbsp; main project
