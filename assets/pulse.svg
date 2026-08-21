@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 486" width="1280" height="486" role="img" aria-label="Actividad de los ultimos 12 meses: 883 contribuciones, racha actual de 4 dias, racha mas larga de 15 dias y un pico de 73 contribuciones en un dia.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 486" width="1280" height="486" role="img" aria-label="Actividad de los ultimos 12 meses: 883 contribuciones, racha actual de 0 dias, racha mas larga de 15 dias y un pico de 73 contribuciones en un dia.">
   <title>Actividad · Mateo Pereyra</title>
   <defs><style>
       .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
@@ -18,7 +18,7 @@
   <text class="mono key" x="64" y="112">CONTRIBUCIONES</text>
   <text class="sans big" x="64" y="166">883<tspan class="sans unit" dx="8"></tspan></text>
   <text class="mono key" x="368" y="112">RACHA ACTUAL</text>
-  <text class="sans big" x="368" y="166">4<tspan class="sans unit" dx="8">días</tspan></text>
+  <text class="sans big" x="368" y="166">0<tspan class="sans unit" dx="8">días</tspan></text>
   <text class="mono key" x="672" y="112">RACHA MAS LARGA</text>
   <text class="sans big" x="672" y="166">15<tspan class="sans unit" dx="8">días</tspan></text>
   <text class="mono key" x="976" y="112">DIA MAS ACTIVO</text>
@@ -409,6 +409,7 @@
   <rect x="1148" y="290" width="16" height="16" fill="#4A3A17"><title>2026-08-18: 7</title></rect>
   <rect x="1148" y="310" width="16" height="16" fill="#C4952F"><title>2026-08-19: 26</title></rect>
   <rect x="1148" y="330" width="16" height="16" fill="#17170F"><title>2026-08-20: 0</title></rect>
+  <rect x="1148" y="350" width="16" height="16" fill="#17170F"><title>2026-08-21: 0</title></rect>
   <text class="mono legend" x="64" y="444">MENOS</text>
   <rect x="140" y="434" width="14" height="14" fill="#17170F"/>
   <rect x="162" y="434" width="14" height="14" fill="#4A3A17"/>
