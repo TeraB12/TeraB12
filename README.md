@@ -20,11 +20,23 @@ No entrego demos. Entrego sistemas que quedan andando, y me quedo cerca midiendo
 
 ## En qué estoy ahora
 
-### Localazo &nbsp;·&nbsp; proyecto principal
+### Facturaza &nbsp;·&nbsp; en producción
+
+Facturación al cobrar para monotributistas de toda Argentina. Lee lo que cobra cada persona por Mercado Pago, Tiendanube, resúmenes, capturas y abonos, le arma la Factura C con ARCA el mismo día y le muestra cobrado, facturado y tope en una línea. Abierta al público desde octubre de 2026.
+
+`Next.js 16` `TypeScript` `Drizzle` `PostgreSQL 18` `AWS KMS` `Claude` `Railway` &nbsp;·&nbsp; [facturaza.com.ar](https://facturaza.com.ar)
+
+### Pulso Gestión &nbsp;·&nbsp; en construcción
+
+Sistema de gestión multirubro en la nube: mostrador que vende sin internet, facturación con ARCA, stock, compras leídas por foto, cuentas corrientes, caja y contabilidad por partida doble desde la primera venta. Anda en Windows, Android, iPhone y tablets. Hoy está en los cimientos: todavía no factura ni vende.
+
+`Next.js 16` `TypeScript` `Drizzle` `PostgreSQL` `PWA`
+
+### Localazo &nbsp;·&nbsp; en producción
 
 Plataforma por suscripción que le da a un comercio chico dos cosas: una web pública propia en `{comercio}.localazo.com.ar` y un sistema para manejar el día a día.
 
-La decisión que ordena todo el proyecto es que **el núcleo no sabe de rubros**. Barbería, el primer vertical, se enchufa por un contrato en `verticales/` sin tocar una línea de `nucleo/`. Sumar el rubro siguiente no debería costar un refactor.
+La decisión que ordena todo el proyecto es que **el núcleo no sabe de rubros**. Barbería, belleza y comida para llevar ya están a la venta, y cada rubro se enchufa por un contrato en `verticales/` sin tocar una línea de `nucleo/`. Sumar el siguiente no debería costar un refactor.
 
 `Next.js` `TypeScript` `Drizzle` `PostgreSQL` `Railway` &nbsp;·&nbsp; [localazo.com.ar](https://localazo.com.ar)
 
@@ -32,7 +44,13 @@ La decisión que ordena todo el proyecto es que **el núcleo no sabe de rubros**
 
 App para rescatar perritos y gatitos de la calle y encontrarles familia. Nadie cobra nada, nunca. Se puede navegar todo sin cuenta: la cuenta hace falta sólo para publicar un rescate, guardar favoritos y chatear.
 
-`Next.js 16` `React 19` `TypeScript` `PostgreSQL 18` `Railway` &nbsp;·&nbsp; [blussi.vercel.app](https://blussi.vercel.app)
+`Next.js 16` `React 19` `TypeScript` `PostgreSQL 18` `Railway` &nbsp;·&nbsp; [blussi.com.ar](https://blussi.com.ar)
+
+### Pulso Devs &nbsp;·&nbsp; beta por invitación
+
+Plataforma para programadores independientes, centrada en la parte del trabajo que no es programar. Abre por secciones: ya andan el perfil, los hilos y las skills.
+
+`Next.js 16` `NestJS` `Prisma` `PostgreSQL` &nbsp;·&nbsp; [devs.pulsosoftware.com](https://devs.pulsosoftware.com)
 
 <br>
 
@@ -41,11 +59,12 @@ App para rescatar perritos y gatitos de la calle y encontrarles familia. Nadie c
 | Sistema | Qué resuelve | |
 | :--- | :--- | :--- |
 | **MyA Importaciones** | Mostrador, tienda online y mayorista sobre la misma base. Más de 2.300 productos con variantes y fotos. La factura sale sola al cerrar la venta. | [ver](https://myaimportaciones.com.ar) |
-| **Catálogos de revendedores** | Cada revendedor recibe su catálogo con su subdominio, su logo y sus precios, tomando el stock del comercio. El alta del dominio se hace sola. | [ver](https://logiweb.catalogocba.com.ar) |
-| **Logiweb Distribuciones** | Importación de la lista de precios del proveedor, remitos exportables a PDF y venta por medio pack. | |
-| **El Paso del Elefante** | Depósito por rack y posición, tareas con cronómetro y cuenta corriente en pesos y en dólares. | en desarrollo |
+| **Isis Distribuidora** | Tienda mayorista y sistema de gestión en un solo lugar: pedidos con hoja de armado, cuentas corrientes, proveedores, stock, compras e informes, con usuarios por persona. | [ver](https://isisdistribuidora.catalogocba.com.ar) |
+| **MasQ'Maní** | Web propia y panel de una marca de pastas de maní y almacén natural. El pedido sale por WhatsApp y la lista de precios se arma sola. | [ver](https://masqmani.com.ar) |
+| **Catálogos Pulso** | Cada negocio recibe su catálogo con su subdominio, su logo, sus precios y una estética para su rubro. El alta del dominio se hace sola. | [ver](https://oficialtienda.catalogocba.com.ar) |
+| **Logiweb Distribuciones** | Importación de la lista de precios del proveedor, remitos exportables a PDF y venta por medio pack. | [ver](https://logiweb.catalogocba.com.ar) |
+| **El Paso del Elefante** | Depósito por rack y posición, tareas con cronómetro y cuenta corriente en pesos y en dólares. | [ver](https://elpasodelelefante.com) |
 | **Sistema automático Meli** | Varias cuentas de Mercado Libre en una sola pantalla, con ingreso, ganancia y margen ya calculados y cada firma separada. | |
-| **Evolux** | Web institucional de una agencia que escala marcas dentro de Mercado Libre. | [ver](https://evolux-rouge.vercel.app) |
 | **Centro de control de Pulso** | Consola interna: clientes, proyectos, tickets y cobros. Los sistemas en producción le mandan señal, así casi siempre veo el problema antes que el cliente. | interno |
 
 <br>
@@ -59,6 +78,9 @@ App para rescatar perritos y gatitos de la calle y encontrarles familia. Nadie c
 ## Decisiones de ingeniería
 
 Lo que de verdad muestra cómo trabajo no es la lista de tecnologías, son las decisiones y lo que costaron.
+
+**Un ARCA de mentira para probar de punta a punta** &nbsp;·&nbsp; *Facturaza*<br>
+La máquina de emisión tiene dos drivers, el real y uno falso, así que todo el circuito se prueba completo sin pedirle un comprobante a ARCA. La clave del certificado vive en AWS KMS. En facturación, el error caro no es el que se ve en pantalla: es el comprobante que salió mal y ya tiene CAE.
 
 **El núcleo no sabe de rubros** &nbsp;·&nbsp; *Localazo*<br>
 Un rubro nuevo entra por el contrato de `verticales/`. Si para agregar barbería hay que tocar `nucleo/`, el contrato está mal diseñado. Cuesta más al principio y se paga solo en el segundo rubro.
@@ -105,6 +127,7 @@ Doce certificaciones obtenidas en el camino:
 | **2025** | El primer sistema de gestión completo, pensado para una empresa desde el primer día. |
 | **jun 2026** | La primera empresa vendiendo sobre el sistema. Migración completa sin perder un solo dato. |
 | **2026** | Pulso pasa a ser una empresa, con varios proyectos en paralelo. |
+| **oct 2026** | Facturaza abre al público y arranca la construcción de Pulso Gestión. |
 
 <br>
 
