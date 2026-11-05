@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 486" width="1280" height="486" role="img" aria-label="Actividad de los ultimos 12 meses: 3267 contribuciones, racha actual de 20 dias, racha mas larga de 20 dias y un pico de 168 contribuciones en un dia.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 486" width="1280" height="486" role="img" aria-label="Actividad de los ultimos 12 meses: 3335 contribuciones, racha actual de 22 dias, racha mas larga de 22 dias y un pico de 168 contribuciones en un dia.">
   <title>Actividad · Mateo Pereyra</title>
   <defs><style>
       .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
@@ -16,11 +16,11 @@
   <path d="M0 .5 H1280 M0 485.5 H1280" stroke="#F4F1EA" stroke-opacity=".11" stroke-width="1"/>
   <text class="mono eyebrow" x="64" y="54">ACTIVIDAD · ULTIMOS 12 MESES</text>
   <text class="mono key" x="64" y="112">CONTRIBUCIONES</text>
-  <text class="sans big" x="64" y="166">3267<tspan class="sans unit" dx="8"></tspan></text>
+  <text class="sans big" x="64" y="166">3335<tspan class="sans unit" dx="8"></tspan></text>
   <text class="mono key" x="368" y="112">RACHA ACTUAL</text>
-  <text class="sans big" x="368" y="166">20<tspan class="sans unit" dx="8">días</tspan></text>
+  <text class="sans big" x="368" y="166">22<tspan class="sans unit" dx="8">días</tspan></text>
   <text class="mono key" x="672" y="112">RACHA MAS LARGA</text>
-  <text class="sans big" x="672" y="166">20<tspan class="sans unit" dx="8">días</tspan></text>
+  <text class="sans big" x="672" y="166">22<tspan class="sans unit" dx="8">días</tspan></text>
   <text class="mono key" x="976" y="112">DIA MAS ACTIVO</text>
   <text class="sans big" x="976" y="166">168<tspan class="sans unit" dx="8"></tspan></text>
   <path d="M64 198.5 H1216" stroke="#F4F1EA" stroke-opacity=".11" stroke-width="1"/>
@@ -407,7 +407,8 @@
   <rect x="1148" y="250" width="16" height="16" fill="#8A6A22"><title>2026-11-01: 23</title></rect>
   <rect x="1148" y="270" width="16" height="16" fill="#C4952F"><title>2026-11-02: 53</title></rect>
   <rect x="1148" y="290" width="16" height="16" fill="#8A6A22"><title>2026-11-03: 42</title></rect>
-  <rect x="1148" y="310" width="16" height="16" fill="#17170F"><title>2026-11-04: 0</title></rect>
+  <rect x="1148" y="310" width="16" height="16" fill="#8A6A22"><title>2026-11-04: 50</title></rect>
+  <rect x="1148" y="330" width="16" height="16" fill="#4A3A17"><title>2026-11-05: 18</title></rect>
   <text class="mono legend" x="64" y="444">MENOS</text>
   <rect x="140" y="434" width="14" height="14" fill="#17170F"/>
   <rect x="162" y="434" width="14" height="14" fill="#4A3A17"/>
